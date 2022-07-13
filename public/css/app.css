@@ -123,6 +123,44 @@
   background-color: rgb(39, 148, 194);
 }
 
+.single_film {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.single_film .current-film {
+  position: relative;
+}
+
+.single_film .current-film img {
+  position: absolute;
+  bottom: 0px;
+}
+
+.single_film .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single_film .container .text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.single_film .container .text h3 {
+  color: blue;
+}
+
+.single_film .container .image {
+  width: 30%;
+}
+
+.single_film .container .image img {
+  width: 100%;
+  height: auto;
+}
+
 .background_Image {
   width: 100%;
   background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);

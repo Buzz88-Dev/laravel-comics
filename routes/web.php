@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [     // collegamento al file home.blade.php in views
         'pageTitle' => 'DC-Comics',
-        'arrComics' => config('comics_links'),  // alternativa guardare il foreach in header.blade.php e footer.blade.php
+        'arrFilms' => config('comics_links'),  // alternativa guardare il foreach in header.blade.php e footer.blade.php
     ]);
 })->name('home');
 
@@ -27,13 +27,29 @@ Route::get('/', function () {
 //         // 'arrHeader' => $arr_Header,
 //         'pageTitle' => 'DC-Comics',
 //         'arrComics' => $arr_Comics,
+//          dd(Route::currentRouteName())
 //     ]);
 // })->name('home');
+// Route::currentRouteName();
 
 
-Route::get('/film', function () {
-    return view('film', [     // collegamento al file film.blade.php in views
-        'pageTitle' => 'Dc-Film',
-        'arrComics' => config('comics_links'),
-    ]);
-})->name('film');
+Route::get('/{id}', function ($id) {
+
+    $film = null;
+    foreach (config('comics_links') as $value){
+        if ($value['id'] == $id){
+            $film = $value;
+            break;
+        }
+    }
+
+    if ($film){
+        return view('singlefilm', [     // collegamento al file film.blade.php in views
+            'pageTitle' => 'Dc-Film',
+            'film' => $film,
+        ]);
+    } else {
+        abort(404);
+    }
+})->name('singlefilm');
+

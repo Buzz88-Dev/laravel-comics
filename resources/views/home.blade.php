@@ -8,9 +8,11 @@
         <div class="current-series">CURRENT SERIES</div>
 
         <ul class="title">
-            @foreach ($arrComics as $link)
+            @foreach ($arrFilms as $link)
+            {{-- @dd($arrFilms); --}}
             <li class="container_serie">
-                <a href="/film">
+                {{-- ANALIZZARE href --}}
+                <a href="/{{ $link['id'] }}">
                     <img src="{{ $link['thumb'] }}">
                     <span>{{ $link['series']}}</span>
                 </a>
