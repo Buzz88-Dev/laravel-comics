@@ -141,11 +141,12 @@
 
         img {
             position: absolute;
-            bottom: 0px;
+            bottom: 20px;
         }
     }
 
     .container {
+        margin: 30px 0;
         display: flex;
         justify-content: space-between;
 
@@ -156,6 +157,10 @@
 
             h3 {
                 color: blue;
+            }
+
+            .long_text {
+                font-size: 11px;
             }
         }
 
@@ -169,6 +174,79 @@
         }
     }
 
+}
+
+.grey {
+    background-color: rgb(220, 218, 218);
+    color: blue;
+    padding: 50px 0;
+
+    .text_blue {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .text_blue_left {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+
+            hr {
+                color: grey;
+            }
+
+            .artist {
+                display: flex;
+                justify-content: space-between;
+
+                .artist_title {
+                    width: 20%;
+                }
+
+                .artist_name {
+                    width: 60%;
+                }
+            }
+
+            .writers {
+                display: flex;
+                justify-content: space-between;
+
+                .writers_title {
+                    width: 20%;
+                }
+
+                .writers_name {
+                    width: 60%;
+                }
+            }
+        }
+
+        .text_blue_right {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+
+            hr {
+                color: grey;
+            }
+
+            .series, .price, .sale_date {
+                display: flex;
+                justify-content: space-between;
+
+                .first {
+                    width: 20%;
+                }
+
+                .second {
+                    width: 60%;
+                }
+            }
+
+        }
+    }
 }
 
 

@@ -134,10 +134,11 @@
 
 .single_film .current-film img {
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
 }
 
 .single_film .container {
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -152,6 +153,10 @@
   color: blue;
 }
 
+.single_film .container .text .long_text {
+  font-size: 11px;
+}
+
 .single_film .container .image {
   width: 30%;
 }
@@ -159,6 +164,84 @@
 .single_film .container .image img {
   width: 100%;
   height: auto;
+}
+
+.grey {
+  background-color: rgb(220, 218, 218);
+  color: blue;
+  padding: 50px 0;
+}
+
+.grey .text_blue {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey .text_blue .text_blue_left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.grey .text_blue .text_blue_left hr {
+  color: grey;
+}
+
+.grey .text_blue .text_blue_left .artist {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey .text_blue .text_blue_left .artist .artist_title {
+  width: 20%;
+}
+
+.grey .text_blue .text_blue_left .artist .artist_name {
+  width: 60%;
+}
+
+.grey .text_blue .text_blue_left .writers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey .text_blue .text_blue_left .writers .writers_title {
+  width: 20%;
+}
+
+.grey .text_blue .text_blue_left .writers .writers_name {
+  width: 60%;
+}
+
+.grey .text_blue .text_blue_right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.grey .text_blue .text_blue_right hr {
+  color: grey;
+}
+
+.grey .text_blue .text_blue_right .series,
+.grey .text_blue .text_blue_right .price,
+.grey .text_blue .text_blue_right .sale_date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey .text_blue .text_blue_right .series .first,
+.grey .text_blue .text_blue_right .price .first,
+.grey .text_blue .text_blue_right .sale_date .first {
+  width: 20%;
+}
+
+.grey .text_blue .text_blue_right .series .second,
+.grey .text_blue .text_blue_right .price .second,
+.grey .text_blue .text_blue_right .sale_date .second {
+  width: 60%;
 }
 
 .background_Image {

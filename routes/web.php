@@ -35,7 +35,7 @@ Route::get('/', function () {
 
 Route::get('/{id}', function ($id) {
 
-    $film = null;
+    $film = false;
     foreach (config('comics_links') as $value){
         if ($value['id'] == $id){
             $film = $value;
